@@ -1,5 +1,7 @@
 //**********//XHR//**********//
 
+var webpage = $("#everything");
+
 var chatty = function(object) {
 
 	var darkThemeCheck = $("#darkTheme");
