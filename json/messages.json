@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "name": "Xavier",
+      "messages": ["Hello Sven"],
+
+      "name": "Joanna",
+      "messages": ["A/S/L? lol!"],
+
+      "name": "Mackenzie",
+      "messages": ["N E Chix looking 4 a Sk8r Boi?"],
+
+      "name": "Gunter",
+      "messages": ["Yea, ur Mum"],
+
+      "name": "Iveta",
+      "messages": ["Ya, Dat is guud"],
+
+      "name": "Sven",
+      "messages": ["Hello Xavier, my friend"]
+    }
+  ]
+}
