@@ -1,0 +1,15 @@
+
+/*////////////////////////////////////////////////////////////Nav/////////////////////////////////////////////////*/
+#logo {
+  display: inline-block;
+  width: 12%;
+  float: left;
+  padding: 20px 15px 50px 44px;
+}
+
+#enterMessage {
+  width: 42%;
+  margin: 30px 10px 20px -20px;
+  display: block;
+  float: left;
+}

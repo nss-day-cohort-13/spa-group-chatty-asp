@@ -4,17 +4,24 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Chatty!</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div id="nav-bar">
+	<div id="navBar">
 		<div id="logo">
 			<h1>Chatty!</h1>
 		</div>
-		<input type="text" id="input-field" placeholder="Enter message"autofocus>
-		<input type="button" id="clear-all-btn" value="Clear message board" onclick=""></input>
-		<input type="checkbox" name="dark-theme" value="dark-theme">Dark Theme
-		<input type="checkbox" name="large-text" value="large-text">Large Text
+		<input type="text" id="enterMessage" size="25" placeholder="Enter message"autofocus>
+		<input type="button" id="clearBoard" value="Clear message board" onclick=""></input>
+	</div>
+	<div id=options>
+		<input type="checkbox" id=darkTheme, name="dark-theme" value="dark-theme">Dark Theme
+		<input type="checkbox" id=largeText, name="large-text" value="large-text">Large Text
+	</div>
+	<div id=messages>
+		<li class="chatBlock"> <p class="chatText">James: Hey is anyone here?</p><button class="deleteButton" value="Delete"></button></li>
+		
 	</div>
 	<script src="/javascripts/arrayManager.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="/javascripts/domManager.js" type="text/javascript" charset="utf-8" async defer></script>
