@@ -3,27 +3,15 @@
 var chatty = function(object) {
 
 	var messagesDiv = document.getElementById("messages");
-
 	var enterMessage = document.getElementById("enterMessage");
 	var clearBoard = document.getElementById("clearBoard");
 
-
-
-	object.writeToDom = function(array) {
-
+	var clearBoardCallBack = function() {
 		var chatBlock = document.getElementsByClassName("chatBlock");
-		// var content = '';
-		// console.log(chatBlock[1]);
-
-		for (var i = 0; i < array.length; i++) {
-			chatBlock[i].innerHTML = (
-				`<p class="chatText">${array[i].user}: ${array[i].text}</p>`+
-				`<button class="deleteButton" value="Delete">Delete</button>`
-				);
+		for (var i = 0; i < chatBlock.length; i++) {
+			chatBlock[i].innerHTML = '';
 		};
-
-		// messagesDiv.innerHTML = content;
-
+		chatty.setArray([]);
 	};
 
 	var addEnterMessageEventListener = function() {
@@ -40,18 +28,30 @@ var chatty = function(object) {
 						};
 
 					chatty.setArrayItem(message);
-					chatty.writeToDom(chatty.getArray());
-					console.log(chatty.getArray());
+				enterMessage.value = '';
+
 			};
 		});
 	}();
 
 	var addClearBoardEventListener = function() {
-
-		clearBoard.addEventListener("click", function(event) {
-			messagesDiv.innerHTML = '<div></div>';
-		});
+		
+		clearBoard.addEventListener("click", clearBoardCallBack);
 	}();
+
+	object.addDeleteButtonEventListeners = function() {
+		var deleteButton = document.getElementsByClassName("deleteButton");
+		console.log(deleteButton);
+		for (var i = 0; i < deleteButton.length; i++) {
+			deleteButton[i].addEventListener("click", function(event) {
+				var newArray = chatty.getArray();
+				newArray.splice(event.target.parentNode.getAttribute("index"), 1);
+				clearBoardCallBack();
+				chatty.setArray(newArray);
+
+			});
+		};
+	};
 	
 	//RETURNS AN OBJECT WITH A METHOD ATTACHED//	
 	return object;	

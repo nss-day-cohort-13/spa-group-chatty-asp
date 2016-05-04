@@ -13,7 +13,6 @@ var xhr = function() {
 		};
 
 		chatty.writeToDom(chatty.getArray());
-		
 
 	};
 
