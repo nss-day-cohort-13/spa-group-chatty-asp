@@ -2,11 +2,21 @@
   box-sizing: border-box;
 }
 /*////////////////////////////////////////////////////////////Nav/////////////////////////////////////////////////*/
+#navBar {
+  position: fixed;
+  width: 100%;
+  /*background: mediumseagreen;*/
+  z-index: 100;
+  top: -10px;
+  background: white;
+  border-bottom: black 1px solid;
+}
+
 #logo {
-  display: inline-block;
+  display: block;
   width: 12%;
   float: left;
-  padding: 20px 15px 0px 44px;
+  margin: 20px 0px 0px 44px;
 }
 
 #logo h1 {
@@ -21,6 +31,8 @@
 }
 
 #clearBoard {
+  /*display: block;*/
+  width: 17%;
   margin: 49px 0px 0px 0px;
 }
 
@@ -30,6 +42,7 @@ margin-left:190px;
 }
 
 #options {
+  /*position: fixed;*/
   margin:20px 0px;
   width: 400px;
   margin-left: 300px;
@@ -44,6 +57,9 @@ margin-left:190px;
 
 
 #messages {
+  margin-top: 200px;
+  /*position: absolute;*/
+  /*top: 180px;*/
   width: 75%;
   height: 750px;
   /*min-height: 500px;*/
