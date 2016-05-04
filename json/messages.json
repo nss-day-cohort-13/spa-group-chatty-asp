@@ -1,24 +1,28 @@
 {
   "messages": [
     {
-      "user": "user_1",
+      "user": "Xavier",
       "text": "Test message_1"
     },
     {
-      "user": "user_2",
+      "user": "Joanna",
       "text": "Test message_2"
     },
     {
-      "user": "user_3",
+      "user": "Mackenzie",
       "text": "Test message_3"
     },
     {
-      "user": "user_4",
+      "user": "Gunter",
       "text": "Test message_4"
     },
     {
-      "user": "user_5",
+      "user": "Iveta",
       "text": "Test message_5"
+    },
+    {
+      "user": "Sven",
+      "text": "Test message_6"
     }
   ]
 }

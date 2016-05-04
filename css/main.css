@@ -45,7 +45,8 @@ margin-left:190px;
 
 #messages {
   width: 75%;
-  min-height: 500px;
+  height: 750px;
+  /*min-height: 500px;*/
   border: 1px black solid;
   margin-left: 157px;
   padding: 25px;
@@ -54,11 +55,16 @@ margin-left:190px;
 
 .chatText {
   display: inline-block;
-  margin: 2.5%;
+  margin: 9px;
 }
 
 .chatBlock button {
   display: inline-block;
+}
+
+.deleteButton {
+  font-size: .80em;
+  /*padding: 0px;*/
 }
 
 /*//////////////////////////////////////////////////////Footer///////////////////////////////////////////////////////*/
@@ -75,7 +81,7 @@ margin-left:190px;
 
 /*/THIS IS THE CSS FOR LARGE TEXT THINGIE*/
 .makeLarge {
-  font-size: 2em;
+  font-size: 1.20em;
 }
 
 /*/CSS FOR DARK THEME*/

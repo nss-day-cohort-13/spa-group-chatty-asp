@@ -24,6 +24,14 @@ var chatty = function(object) {
 
 	//METHOD ADDS AN OBJECT TO THE END OF THE MESSAGES ARRAY//
 	object.setArrayItem = function(object) {
+
+		//IF THERE ARE MORE THAN 20 MESSAGES ON THE SCREEN, RESET THE MESSAGES BACK TO 0
+		if(messages.length > 20) {
+			console.log("messages Before = ", messages)
+			messages = [];
+			console.log("messages After = ", messages)
+		}
+
 		messages[messages.length] = object;
 		chatty.writeToDom(messages, output);
 	};
