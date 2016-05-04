@@ -86,12 +86,16 @@ margin-left:190px;
 
 /*/CSS FOR DARK THEME*/
 
-.makeDark a {
-  color: white;
+.makeDark {
+  background-color: darkgrey;
+  color: #fff;
+  border: 1px solid;
 }
 
-.makeDark {
-  background-color: #3B3C3B;
-  color: #EE1433;
-  border: 1px solid white;
+.makeDark h1 {
+  color: #DC3030;
+}
+
+.makeDark #messages {
+  border-color: white;
 }
