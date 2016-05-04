@@ -1,25 +1,27 @@
-
+* {
+  box-sizing: border-box;
+}
 /*////////////////////////////////////////////////////////////Nav/////////////////////////////////////////////////*/
 #logo {
   display: inline-block;
-  width: 12%;
-  float: left;
-  padding: 20px 15px 0px 44px;
 }
 
 #logo h1 {
-  margin-bottom: 0px;
+  display: inline-block;
+  width: 20%;
+  margin: 2.5%;
 }
 
 #enterMessage {
-  width: 62%;
-  margin: 49px 30px 0px 0px;
-  display: block;
-  float: left;
+display: inline-block;
+  width: 40%;
+  margin: 2.5%;
 }
 
 #clearBoard {
-  margin: 49px 0px 0px 0px;
+  display: inline-block;
+  margin: 2.5%;
+  width: 20%;
 }
 
 #options {
@@ -45,15 +47,13 @@
   list-style: none;
 }
 
-#chatText {
-  display: block;
-  float: left;
-  min-width: 33%;
-  max-width: 80%;
+.chatText{
+  display: inline-block;
+  margin: 2.5%;
 }
 
-#chatBlock button {
-  display: block;
+.chatBlock button {
+  display: inline-block;
 }
 
 /*//////////////////////////////////////////////////////Footer///////////////////////////////////////////////////////*/

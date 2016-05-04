@@ -1,23 +1,25 @@
 {
-  "users": [
+  "messages": [
     {
-      "name": "Xavier",
-      "messages": ["Hello Sven"],
-
-      "name": "Joanna",
-      "messages": ["A/S/L? lol!"],
-
-      "name": "Mackenzie",
-      "messages": ["N E Chix looking 4 a Sk8r Boi?"],
-
-      "name": "Gunter",
-      "messages": ["Yea, ur Mum"],
-
-      "name": "Iveta",
-      "messages": ["Ya, Dat is guud"],
-
-      "name": "Sven",
-      "messages": ["Hello Xavier, my friend"]
+      "user": "user_1",
+      "text": "Test message_1"
+    },
+    {
+      "user": "user_2",
+      "text": "Test message_2"
+    },
+    {
+      "user": "user_3",
+      "text": "Test message_3"
+    },
+    {
+      "user": "user_4",
+      "text": "Test message_4"
+    },
+    {
+      "user": "user_5",
+      "text": "Test message_5"
     }
   ]
 }
+    
