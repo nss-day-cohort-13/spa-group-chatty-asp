@@ -22,7 +22,25 @@ var chatty = function(object) {
 
 	};
 
+	var addEnterMessageEventListener = function() {
 
+		enterMessage.addEventListener("keypress", function() {
+			if (
+				(event.keycode === 13 || event.which === 13) &&
+				(enterMessage.value !== "")
+				) {
+					var message =
+						{
+						user: "Patrick",
+						text: enterMessage.value
+						};
+
+					chatty.setArrayItem(message);
+					chatty.writeToDom(chatty.getArray());
+					console.log(chatty.getArray());
+			};
+		});
+	}();
 	
 	//RETURNS AN OBJECT WITH A METHOD ATTACHED//	
 	return object;	
