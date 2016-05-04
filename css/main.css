@@ -65,3 +65,19 @@ display: inline-block;
 #footer p {
   text-align: center;
 }
+//THIS IS THE CSS FOR LARGE TEXT THINGIE
+.makeLarge {
+  font-size: 2em;
+}
+
+//CSS FOR DARK THEME
+
+.makeDark a {
+  color: white;
+}
+
+.makeDark {
+  background-color: #3B3C3B;
+  color: #EE1433;
+  border: 1px solid white;
+}

@@ -24,22 +24,6 @@ var chatty = function(object) {
 //INVOKES FUNCTION WITH EMPTY OBJECT IF LIST MUSIC HAS NOT YET INITIALIZED//
 }(chatty || {}); //guys, what should go here?-AAA
 
- //THIS IS THE CSS FOR LARGE TEXT THINGIE
-.makeLarge {
-	font-size: 2em;
-}
-
-//CSS FOR DARK THEME
-
-.makeDark a {
-	color: white;
-}
-
-.makeDark {
-	background-color: #3B3C3B;
-	color: #EE1433;
-	border: 1px solid white;
-}
 
 
 //THIS IS THE TIMESTAMP STUFF FOR THE JS
