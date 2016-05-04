@@ -4,12 +4,64 @@
   display: inline-block;
   width: 12%;
   float: left;
-  padding: 20px 15px 50px 44px;
+  padding: 20px 15px 0px 44px;
+}
+
+#logo h1 {
+  margin-bottom: 0px;
 }
 
 #enterMessage {
-  width: 42%;
-  margin: 30px 10px 20px -20px;
+  width: 62%;
+  margin: 49px 30px 0px 0px;
   display: block;
   float: left;
+}
+
+#clearBoard {
+  margin: 49px 0px 0px 0px;
+}
+
+#options {
+  margin:20px 0px;
+  width: 400px;
+  margin-left: 300px;
+}
+
+#options p {
+  display: inline;
+  padding-right: 25px;
+}
+
+/*//////////////////////////////////////////////////////Message Board/////////////////////////////////////////////////*/
+
+
+#messages {
+  width: 75%;
+  min-height: 500px;
+  border: 1px black solid;
+  margin-left: 157px;
+  padding: 25px;
+  list-style: none;
+}
+
+#chatText {
+  display: block;
+  float: left;
+  min-width: 33%;
+  max-width: 80%;
+}
+
+#chatBlock button {
+  display: block;
+}
+
+/*//////////////////////////////////////////////////////Footer///////////////////////////////////////////////////////*/
+
+#footer {
+  margin: 20px 0px;
+}
+
+#footer p {
+  text-align: center;
 }

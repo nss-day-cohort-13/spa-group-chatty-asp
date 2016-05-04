@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body id="everything">
 	<div id="navBar">
 		<div id="logo">
 			<h1>Chatty!</h1>
@@ -16,16 +16,21 @@
 		<input type="button" id="clearBoard" value="Clear message board" onclick=""></input>
 	</div>
 	<div id=options>
-		<input type="checkbox" id=darkTheme, name="dark-theme" value="dark-theme">Dark Theme
-		<input type="checkbox" id=largeText, name="large-text" value="large-text">Large Text
+		<input type="checkbox" id=makeDark, name="dark-theme" value="dark-theme"><p>Dark Theme</p>
+		<input type="checkbox" id=largeText, name="large-text" value="large-text"><p>Large Text</p>
 	</div>
 	<div id=messages>
-		<li class="chatBlock"> <p class="chatText">James: Hey is anyone here?</p><button class="deleteButton" value="Delete"></button></li>
+		<li class="chatBlock"> <p class="chatText">James: Hey is anyone here?</p><button class="deleteButton" value="Delete">Delete</button></li>
 		
 	</div>
 	<script src="/javascripts/arrayManager.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="/javascripts/domManager.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="/javascripts/xhr.js" type="text/javascript" charset="utf-8" async defer></script>
-	<script src="/javascripts/themes.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="/javascripts/options.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
+<footer>
+	<div id="footer">
+		<p> Copyright ASP 2016</p>
+	</div>
+</footer>
 </html>
