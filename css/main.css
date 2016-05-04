@@ -13,7 +13,7 @@
 }
 
 #enterMessage {
-display: inline-block;
+  display: inline-block;
   width: 40%;
   margin: 2.5%;
 }
@@ -22,6 +22,10 @@ display: inline-block;
   display: inline-block;
   margin: 2.5%;
   width: 20%;
+}
+
+#userList {
+  display: inline;
 }
 
 #options {
