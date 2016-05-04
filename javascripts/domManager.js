@@ -8,8 +8,14 @@ var chatty = function(object) {
 
 	//CALL FUNCTION FOR ENTER MESSAGE EVENT LISTENER//
 	var enterMessageCallback = function(event) {
+		var userRadio = document.getElementsByClassName("userRadio");
 		if (event.which === 13 && enterMessage.value !== "") {
-			var message = {user: "Patrick", text: enterMessage.value};
+			for (var i = 0; i < userRadio.length; i++) {
+				if(userRadio[i].checked === true) {
+					var user = userRadio[i].value;
+				};
+			};
+			var message = {user: user, text: enterMessage.value};
 			chatty.setArrayItem(message);
 			enterMessage.value = '';
 		};
