@@ -9,20 +9,16 @@
       "text": "Test message_2"
     },
     {
-      "user": "Mackenzie",
+      "user": "Gunter",
       "text": "Test message_3"
     },
     {
-      "user": "Gunter",
+      "user": "Iveta",
       "text": "Test message_4"
     },
     {
-      "user": "Iveta",
-      "text": "Test message_5"
-    },
-    {
       "user": "Sven",
-      "text": "Test message_6"
+      "text": "Test message_5"
     }
   ]
 }
