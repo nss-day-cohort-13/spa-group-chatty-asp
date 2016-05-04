@@ -4,28 +4,29 @@
 /*////////////////////////////////////////////////////////////Nav/////////////////////////////////////////////////*/
 #logo {
   display: inline-block;
+  width: 12%;
+  float: left;
+  padding: 20px 15px 0px 44px;
 }
 
 #logo h1 {
-  display: inline-block;
-  width: 20%;
-  margin: 2.5%;
+  margin-bottom: 0px;
 }
 
 #enterMessage {
-  display: inline-block;
-  width: 40%;
-  margin: 2.5%;
+  width: 62%;
+  margin: 49px 30px 0px 20px;
+  display: block;
+  float: left;
 }
 
 #clearBoard {
-  display: inline-block;
-  margin: 2.5%;
-  width: 20%;
+  margin: 49px 0px 0px 0px;
 }
 
 #userList {
-  display: inline;
+padding:20px 0px 0px 0px;
+margin-left:190px;
 }
 
 #options {
@@ -51,7 +52,7 @@
   list-style: none;
 }
 
-.chatText{
+.chatText {
   display: inline-block;
   margin: 2.5%;
 }
