@@ -1,11 +1,14 @@
 //**********//ARRAY MANAGER//**********//	
 var chatty = function(object) {
 
+	//DECLARES DOM ELEMENT VARIABLE//
+	var output = document.getElementById("messages");
+
 	//DECLARES MAIN ARRAY FOR CHAT BLOCK OBJECTS//
 	var messages = [];
 
 	//METHOD FORMATS AND WRITES GIVEN ARRAY TO THE MESSAGES DIV//
-	object.writeToDom = function(array,elem) {
+	object.writeToDom = function(array, elem) {
 
 		var messages = document.getElementById("messages");
 		var content = '';
@@ -18,14 +21,14 @@ var chatty = function(object) {
 				`</li>`
 				);
 		};
-		messages.innerHTML = content;
+		elem.innerHTML = content;
 		chatty.addDeleteButtonEventListeners();
 	};
 
 	//METHOD ADDS AN OBJECT TO THE END OF THE MESSAGES ARRAY//
 	object.setArrayItem = function(object) {
 		messages[messages.length] = object;
-		chatty.writeToDom(messages);
+		chatty.writeToDom(messages, output);
 	};
 
 	//METHOD RETURNS MESSAGES ARRAY//
@@ -36,7 +39,7 @@ var chatty = function(object) {
 	//METHOD SETS MESSAGES ARRAY//
 	object.setArray = function(array) {
 		messages = array;
-		chatty.writeToDom(messages);
+		chatty.writeToDom(messages, output);
 	};
 
 	//RETURNS AN OBJECT WITH A METHOD ATTACHED//	
