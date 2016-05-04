@@ -4,6 +4,7 @@ var chatty = function(object) {
 
 	var messagesDiv = document.getElementById("messages");
 	var enterMessage = document.getElementById("enterMessage");
+	var clearBoard = document.getElementById("clearBoard");
 
 
 
@@ -24,7 +25,7 @@ var chatty = function(object) {
 
 	var addEnterMessageEventListener = function() {
 
-		enterMessage.addEventListener("keypress", function() {
+		enterMessage.addEventListener("keypress", function(event) {
 			if (
 				(event.keycode === 13 || event.which === 13) &&
 				(enterMessage.value !== "")
@@ -39,6 +40,13 @@ var chatty = function(object) {
 					chatty.writeToDom(chatty.getArray());
 					console.log(chatty.getArray());
 			};
+		});
+	}();
+
+	var addClearBoardEventListener = function() {
+
+		clearBoard.addEventListener("click", function(event) {
+			messagesDiv.innerHTML = '<div></div>';
 		});
 	}();
 	
