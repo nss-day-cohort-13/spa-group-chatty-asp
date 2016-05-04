@@ -3,23 +3,26 @@
 var chatty = function(object) {
 
 	var messagesDiv = document.getElementById("messages");
+
 	var enterMessage = document.getElementById("enterMessage");
 	var clearBoard = document.getElementById("clearBoard");
 
 
 
 	object.writeToDom = function(array) {
-		var content = '';
+
+		var chatBlock = document.getElementsByClassName("chatBlock");
+		// var content = '';
+		// console.log(chatBlock[1]);
+
 		for (var i = 0; i < array.length; i++) {
-			content += (
-				`<li class="chatBlock">` +
+			chatBlock[i].innerHTML = (
 				`<p class="chatText">${array[i].user}: ${array[i].text}</p>`+
-				`<button class="deleteButton" value="Delete">Delete</button>`+
-				`</li>`
+				`<button class="deleteButton" value="Delete">Delete</button>`
 				);
 		};
 
-		messagesDiv.innerHTML = content;
+		// messagesDiv.innerHTML = content;
 
 	};
 
