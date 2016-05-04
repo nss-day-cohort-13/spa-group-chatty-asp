@@ -10,7 +10,12 @@ var chatty = function(object) {
 	//METHOD FORMATS AND WRITES GIVEN ARRAY TO THE MESSAGES DIV//
 	object.writeToDom = function(array, elem) {
 		var content = '';
-		for (var i = 0; i < array.length; i++) {
+		var i = 0;
+		if(array.length > 20) {
+			i = (array.length - 20)
+		};
+
+		for (i; i < array.length; i++) {
 			content += (
 				`<li class="chatBlock" index="${i}">`+
 				`<p class="chatText">${array[(i)].user}: ${array[(i)].text}</p>`+
