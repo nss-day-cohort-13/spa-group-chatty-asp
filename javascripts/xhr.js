@@ -7,8 +7,6 @@ var xhr = function() {
 		for (var i = 0; i < pojo.messages.length; i++) {
 			chatty.setArrayItem(pojo.messages[i]);
 		};
-		chatty.writeToDom(chatty.getArray());
-
 	};
 
 	//ADDS EVENT LISTENERS FOR XHR LOAD//
