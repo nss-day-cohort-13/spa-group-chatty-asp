@@ -23,6 +23,7 @@ var xhr = function() {
 		var loadRequest = new XMLHttpRequest();
 		addXhrEventListener(loadRequest);
 		loadRequest.open("GET", "../json/messages.json");
+		// loadRequest.open("GET", "../json/messages-01.json");
 		loadRequest.send();
 	}();
 }();
