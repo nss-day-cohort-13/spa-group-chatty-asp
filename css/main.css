@@ -100,7 +100,7 @@ margin-left:190px;
   font-size: 1.20em;
 }
 
-/*/CSS FOR DARK THEME*/
+/*CSS FOR DARK THEME*/
 
 .makeDark {
   background-color: darkgrey;
@@ -115,3 +115,53 @@ margin-left:190px;
 .makeDark #messages {
   border-color: white;
 }
+
+/*CSS FOR GREEN THEME*/
+
+.makeGreen {
+  background-color: green;
+  color: #000;
+  border: 1px solid;
+}
+
+.makeGreen h1 {
+  color: #0A3710;
+}
+
+.makeGreen #messages {
+  border-color: white;
+}
+
+/*CSS FOR GREY THEME*/
+
+.makeGrey {
+  background-color: #474747;
+  color: #fff;
+  border: 1px solid;
+}
+
+.makeGrey h1 {
+  color: #848584;
+}
+
+.makeGrey #messages {
+  border-color: white;
+}
+
+/*CSS FOR BLACK THEME*/
+
+.makeBlack {
+  background-color: #000000;
+  color: #fff;
+  border: 1px solid;
+}
+
+.makeBlack h1 {
+  color: #fff;
+}
+
+.makeBlack #messages {
+  border-color: white;
+}
+
+
