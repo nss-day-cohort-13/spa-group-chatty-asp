@@ -20,10 +20,13 @@ var xhr = function() {
 
 	//INITIALIZE XHR REQUEST//
 	var load = function() {
-		var loadRequest = new XMLHttpRequest();
-		addXhrEventListener(loadRequest);
-		loadRequest.open("GET", "../json/messages.json");
-		// loadRequest.open("GET", "../json/messages-01.json");
-		loadRequest.send();
+
+		for (var i = 0; i < 5; i++) {
+			var json = `../json/messages${i}.json`
+			var loadRequest = new XMLHttpRequest();
+			addXhrEventListener(loadRequest);
+			loadRequest.open("GET", json);
+			loadRequest.send();
+		}
 	}();
 }();
