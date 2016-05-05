@@ -33,6 +33,10 @@ var chatty = function(object) {
 		elem.innerHTML = contentBuilder(array);
 		chatty.addDeleteButtonEventListeners();
 		chatty.addEditButtonEventListeners();
+		if(document.getElementById("messages").innerHTML == '') {
+			var clearBoard = document.getElementById("clearBoard");
+			clearBoard.setAttribute('disabled', '');
+		};
 	};
 
 	//METHOD ADDS AN OBJECT TO THE END OF THE MESSAGES ARRAY//
