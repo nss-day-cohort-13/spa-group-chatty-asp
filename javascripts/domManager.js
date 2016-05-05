@@ -5,23 +5,47 @@ var chatty = function(object) {
 	var messagesDiv = document.getElementById("messages");
 	var enterMessage = document.getElementById("enterMessage");
 	var clearBoard = document.getElementById("clearBoard");
+	var userRadio = document.getElementsByClassName("userRadio");
 
-	//CALL FUNCTION FOR ENTER MESSAGE EVENT LISTENER//
-	var enterMessageCallback = function(event) {
-		var userRadio = document.getElementsByClassName("userRadio");
-		if (event.which === 13 && enterMessage.value !== "") {
-			for (var i = 0; i < userRadio.length; i++) {
-				if(userRadio[i].checked === true) {
-					var user = userRadio[i].value;
-				};
+	//CLONES TARGET ELEMENT AND REPLACES OLD WITH NEW IN THE DOM//
+	var cloneNode = function(oldElem) {
+		var newElem = oldElem.cloneNode(true);
+		oldElem.parentNode.replaceChild(newElem, oldElem);
+	};
+
+	//RETURNS VALUE OF CHECKED USER RADIO BUTTON//
+	var findUserRadioChecked = function() {
+		for (var i = 0; i < userRadio.length; i++) {
+			if(userRadio[i].checked === true) {
+				return userRadio[i].value;
 			};
-			var message = {user: user, text: enterMessage.value};
-			chatty.setArrayItem(message);
-			enterMessage.value = '';
 		};
 	};
 
-	//CALL FUNCTION FOR CLEAR BOARD EVENT LISTENER//
+	//CALLBACK FOR ENTER MESSAGE EVENT LISTENER//
+	var enterMessageCallback = function(event) {
+		if (event.which === 13 && enterMessage.value !== "") {
+			var message = {user: findUserRadioChecked(), text: event.target.value};
+			chatty.setArrayItem(message);
+			event.target.value = '';
+		};
+	};
+
+	//CALLBACK FOR EDIT ENTER MESSAGE EVENT LISTENER//
+	var editEnterMessageCallback = function(event, index) {
+		if (event.which === 13 && enterMessage.value !== "") {
+			var message = {user: findUserRadioChecked(), text: event.target.value};
+			event.target.value = '';
+			cloneNode(enterMessage);
+			enterMessage = document.getElementById("enterMessage");
+			enterMessage.addEventListener("keypress", enterMessageCallback);
+			var newArray = chatty.getArray();
+			newArray.splice(index, 1, message);
+			chatty.setArray(newArray);
+		};
+	};
+
+	//CALLBACK FOR CLEAR BOARD EVENT LISTENER//
 	var clearBoardCallback = function() {
 		var chatBlock = document.getElementsByClassName("chatBlock");
 		for (var i = 0; i < chatBlock.length; i++) {
@@ -30,11 +54,19 @@ var chatty = function(object) {
 		chatty.setArray([]);
 	};
 
+	//CALLBACK FOR EDIT BUTTON EVENT LISTENERS//
+	var editButtonCallback = function(event) {
+		cloneNode(enterMessage);
+		enterMessage = document.getElementById("enterMessage");
+		enterMessage.focus();
+		enterMessage.value = event.target.parentNode.querySelector(".chatText").innerText;
+		addEditEnterMessageEventListener(event.target.parentNode.getAttribute("index"));
+	};
+
 	//CALLBACK FOR DELETE BUTTON EVENT LISTENERS//
 	var deleteButtonCallback = function(event) {
 		var newArray = chatty.getArray();
 		newArray.splice(event.target.parentNode.getAttribute("index"), 1);
-		clearBoardCallback();
 		chatty.setArray(newArray);
 	};
 
@@ -43,10 +75,25 @@ var chatty = function(object) {
 		enterMessage.addEventListener("keypress", enterMessageCallback);
 	}();
 
+	//ADDS EVENT LISTENER FOR EDIT ENTER MESSAGE INPUT//
+	var addEditEnterMessageEventListener = function(index) {
+		enterMessage.addEventListener("keypress", function(event) {
+			editEnterMessageCallback(event, index);
+		});
+	};
+
 	//ADDS EVENT LISTENER FOR CLEAR BOARD BUTTON//
 	var addClearBoardEventListener = function() {
 		clearBoard.addEventListener("click", clearBoardCallback);
 	}();
+
+	//METHOD ADDS EVENT LISTENERS FOR EDIT BUTTONS//
+	object.addEditButtonEventListeners = function() {
+		var editButton = document.getElementsByClassName("editButton");
+		for (var i = 0; i < editButton.length; i++) {
+			editButton[i].addEventListener("click", editButtonCallback);
+		};
+	};
 
 	//METHOD ADDS EVENT LISTENERS FOR DELETE BUTTONS//
 	object.addDeleteButtonEventListeners = function() {
