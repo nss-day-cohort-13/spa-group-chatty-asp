@@ -8,8 +8,8 @@
   /*background: mediumseagreen;*/
   z-index: 100;
   top: -10px;
-/*  background: white;
-*/  border-bottom: black 1px solid;
+  background: white;
+  border-bottom: black 1px solid;
 }
 
 #logo {
@@ -122,8 +122,11 @@ margin-left:190px;
 
 .makeDark {
   background-color: darkgrey;
-  color: #fff;
   border: 1px solid;
+}
+
+.makeDark #navBar {
+  color: black;
 }
 
 .makeDark h1 {
@@ -142,6 +145,9 @@ margin-left:190px;
   border: 1px solid;
 }
 
+.makeGreen #navBar {
+  color: black;
+
 .makeGreen h1 {
   color: #0A3710;
 }
@@ -158,12 +164,15 @@ margin-left:190px;
   border: 1px solid;
 }
 
+.makeGrey #navBar {
+  color: black;
+
 .makeGrey h1 {
   color: #848584;
 }
 
 .makeGrey #messages {
-  border-color: white;
+  border-color: yellow;
 }
 
 /*CSS FOR BLACK THEME*/
@@ -173,6 +182,8 @@ margin-left:190px;
   color: #fff;
   border: 1px solid;
 }
+.makeBlack #navBar {
+  color: black;
 
 .makeBlack h1 {
   color: #fff;

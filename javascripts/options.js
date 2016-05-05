@@ -4,11 +4,19 @@ var webpage = document.getElementsByTagName("body")[0];
 
 var chatty = function(object) {
 
+	var removeClasses = function() {
+		webpage.classList.remove("makeDark");
+		webpage.classList.remove("makeGreen");
+		webpage.classList.remove("makeGrey");
+		webpage.classList.remove("makeBlack");
+	}
+
 	var darkThemeCheck = document.getElementById("darkTheme");
 	darkThemeCheck.addEventListener("click", darkify);
 
 	function darkify () {
 
+	removeClasses();
 	webpage.classList.toggle("makeDark");
 	}
 
@@ -16,6 +24,8 @@ var chatty = function(object) {
 	largeTextCheck.addEventListener("click", largify);
 
 	function largify () {
+
+	removeClasses();
   	webpage.classList.toggle("makeLarge");
 	}
 
@@ -23,6 +33,8 @@ var chatty = function(object) {
 	greenThemeCheck.addEventListener("click", greenify);
 
 	function greenify () {
+
+	removeClasses();
   	webpage.classList.toggle("makeGreen");
 	}
 
@@ -30,6 +42,8 @@ var chatty = function(object) {
 	greyThemeCheck.addEventListener("click", greyify);
 
 	function greyify () {
+
+	removeClasses();
   	webpage.classList.toggle("makeGrey");
 	}
 
@@ -37,6 +51,8 @@ var chatty = function(object) {
 	blackThemeCheck.addEventListener("click", blackify);
 
 	function blackify () {
+
+	removeClasses();
   	webpage.classList.toggle("makeBlack");
 	}
 
