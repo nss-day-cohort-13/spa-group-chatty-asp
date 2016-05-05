@@ -5,6 +5,7 @@ var xhr = function() {
 	var addXhr = function () {
 		var pojo = JSON.parse(this.responseText);
 		for (var i = 0; i < pojo.messages.length; i++) {
+			pojo.messages[i].time = chatty.getTimeStamp();
 			chatty.setArrayItem(pojo.messages[i]);
 		};
 	};

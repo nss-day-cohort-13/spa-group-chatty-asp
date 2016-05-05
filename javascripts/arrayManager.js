@@ -19,6 +19,7 @@ var chatty = function(object) {
 			content += (
 				`<li class="chatBlock" index="${i}">`+
 				`<p class="chatUser">${array[(i)].user}:</p><p class="chatText">${array[(i)].text}</p>`+
+				`<p class="timeStampValue">${array[i].time}</p>` +
 				`<button class="editButton" value="Edit">Edit</button>`+
 				`<button class="deleteButton" value="Delete">Delete</button>`+
 				`</li>`
