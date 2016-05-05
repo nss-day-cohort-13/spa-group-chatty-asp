@@ -48,4 +48,3 @@ var chatty = function(object) {
 //INVOKES FUNCTION WITH EMPTY OBJECT IF LIST MUSIC HAS NOT YET INITIALIZED//
 }(chatty || {}); //guys, what should go here?-AAA
 
-

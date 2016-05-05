@@ -24,6 +24,4 @@ var xhr = function() {
 		loadRequest.open("GET", "../json/messages.json");
 		loadRequest.send();
 	}();
-
-//INVOKES FUNCTION WITH EMPTY OBJECT IF LIST MUSIC HAS NOT YET INITIALIZED//
 }();

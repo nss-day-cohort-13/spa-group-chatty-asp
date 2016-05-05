@@ -7,24 +7,31 @@ var chatty = function(object) {
 	//DECLARES MAIN ARRAY FOR CHAT BLOCK OBJECTS//
 	var messages = [];
 
-	//METHOD FORMATS AND WRITES GIVEN ARRAY TO THE MESSAGES DIV//
-	object.writeToDom = function(array, elem) {
+
+	//FORMATS CHAT DIV HTML GIVEN AN ARRAY//
+	var contentBuilder = function(array) {
 		var content = '';
 		var i = 0;
 		if(array.length > 20) {
 			i = (array.length - 20)
 		};
-
 		for (i; i < array.length; i++) {
 			content += (
 				`<li class="chatBlock" index="${i}">`+
-				`<p class="chatText">${array[(i)].user}: ${array[(i)].text}</p>`+
+				`<p class="chatUser">${array[(i)].user}:</p><p class="chatText">${array[(i)].text}</p>`+
+				`<button class="editButton" value="Edit">Edit</button>`+
 				`<button class="deleteButton" value="Delete">Delete</button>`+
 				`</li>`
 				);
 		};
-		elem.innerHTML = content;
+		return content;
+	};
+
+	//WRITES GIVEN ARRAY TO THE MESSAGES DIV//
+	object.writeToDom = function(array, elem) {
+		elem.innerHTML = contentBuilder(array);
 		chatty.addDeleteButtonEventListeners();
+		chatty.addEditButtonEventListeners();
 	};
 
 	//METHOD ADDS AN OBJECT TO THE END OF THE MESSAGES ARRAY//
