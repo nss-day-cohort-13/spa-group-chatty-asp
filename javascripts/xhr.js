@@ -28,6 +28,5 @@ var xhr = function() {
 			loadRequest.open("GET", json);
 			loadRequest.send();
 		}
-		
 	}();
 }();
