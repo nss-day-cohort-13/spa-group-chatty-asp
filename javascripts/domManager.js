@@ -25,7 +25,8 @@ var chatty = function(object) {
 	//CALLBACK FOR ENTER MESSAGE EVENT LISTENER//
 	var enterMessageCallback = function(event) {
 		if (event.which === 13 && enterMessage.value !== "") {
-			var message = {user: findUserRadioChecked(), text: event.target.value};
+			console.log("chatty.getTimeStamp()" ,chatty.getTimeStamp())
+			var message = {user: findUserRadioChecked(), text: event.target.value, time: chatty.getTimeStamp()};
 			chatty.setArrayItem(message);
 			event.target.value = '';
 		};
@@ -34,7 +35,7 @@ var chatty = function(object) {
 	//CALLBACK FOR EDIT ENTER MESSAGE EVENT LISTENER//
 	var editEnterMessageCallback = function(event, index) {
 		if (event.which === 13 && enterMessage.value !== "") {
-			var message = {user: findUserRadioChecked(), text: event.target.value};
+			var message = {user: findUserRadioChecked(), text: event.target.value, time: chatty.getTimeStamp()};
 			event.target.value = '';
 			cloneNode(enterMessage);
 			enterMessage = document.getElementById("enterMessage");
