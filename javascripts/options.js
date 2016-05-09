@@ -1,4 +1,6 @@
 /******************Dark Theme and Large Text Functionality************/
+"use strict";
+
 
 var webpage = document.getElementsByTagName("body")[0];
 
@@ -9,7 +11,7 @@ var chatty = function(object) {
 		webpage.classList.remove("makeGreen");
 		webpage.classList.remove("makeGrey");
 		webpage.classList.remove("makeBlack");
-	}
+	};
 
 	var darkThemeCheck = document.getElementById("darkTheme");
 	darkThemeCheck.addEventListener("click", darkify);

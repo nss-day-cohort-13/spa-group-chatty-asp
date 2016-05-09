@@ -1,4 +1,5 @@
 //**********//ARRAY MANAGER//**********//	
+"use strict";
 var chatty = function(object) {
 
 	//DECLARES DOM ELEMENT VARIABLE//
@@ -13,8 +14,8 @@ var chatty = function(object) {
 		var content = '';
 		var i = 0;
 		if(array.length > 20) {
-			i = (array.length - 20)
-		};
+			i = (array.length - 20);
+		}
 		for (i; i < array.length; i++) {
 			content += (
 				`<li class="chatBlock" index="${i}">`+
@@ -24,7 +25,7 @@ var chatty = function(object) {
 				`<button class="deleteButton" value="Delete">Delete</button>`+
 				`</li>`
 				);
-		};
+		}
 		return content;
 	};
 
@@ -36,7 +37,7 @@ var chatty = function(object) {
 		if(document.getElementById("messages").innerHTML == '') {
 			var clearBoard = document.getElementById("clearBoard");
 			clearBoard.setAttribute('disabled', '');
-		};
+		}
 	};
 
 	//METHOD ADDS AN OBJECT TO THE END OF THE MESSAGES ARRAY//

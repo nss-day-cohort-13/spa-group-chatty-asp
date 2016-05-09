@@ -1,0 +1,17 @@
+{
+  "name": "spa-group-chatty-asp",
+  "homepage": "https://github.com/nss-day-cohort-13/spa-group-chatty-asp",
+  "authors": [
+    "Sulaiman.Allen <xalerons@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

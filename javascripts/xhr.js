@@ -1,3 +1,5 @@
+"use strict";
+
 //**********//XHR//**********//
 var xhr = function() {
 
@@ -7,7 +9,7 @@ var xhr = function() {
 		for (var i = 0; i < pojo.messages.length; i++) {
 			pojo.messages[i].time = chatty.getTimeStamp();
 			chatty.setArrayItem(pojo.messages[i]);
-		};
+		}
 	};
 
 	//ADDS EVENT LISTENERS FOR XHR LOAD//
@@ -22,7 +24,7 @@ var xhr = function() {
 	var load = function() {
 
 		for (var i = 0; i < 5; i++) {
-			var json = `../json/messages${i}.json`
+			var json = `../json/messages${i}.json`;
 			var loadRequest = new XMLHttpRequest();
 			addXhrEventListener(loadRequest);
 			loadRequest.open("GET", json);

@@ -1,4 +1,5 @@
 //**********//DOM MANAGER//**********//
+"use strict";
 var chatty = function(object) {
 
 	//DECLARES DOM ELEMENT VARIABLES//
@@ -18,18 +19,18 @@ var chatty = function(object) {
 		for (var i = 0; i < userRadio.length; i++) {
 			if(userRadio[i].checked === true) {
 				return userRadio[i].value;
-			};
-		};
+			}
+		}
 	};
 
 	//CALLBACK FOR ENTER MESSAGE EVENT LISTENER//
 	var enterMessageCallback = function(event) {
 		if (event.which === 13 && enterMessage.value !== "") {
-			console.log("chatty.getTimeStamp()" ,chatty.getTimeStamp())
+			console.log("chatty.getTimeStamp()" ,chatty.getTimeStamp());
 			var message = {user: findUserRadioChecked(), text: event.target.value, time: chatty.getTimeStamp()};
 			chatty.setArrayItem(message);
 			event.target.value = '';
-		};
+		}
 	};
 
 	//CALLBACK FOR EDIT ENTER MESSAGE EVENT LISTENER//
@@ -43,7 +44,7 @@ var chatty = function(object) {
 			var newArray = chatty.getArray();
 			newArray.splice(index, 1, message);
 			chatty.setArray(newArray);
-		};
+		}
 	};
 
 	//CALLBACK FOR CLEAR BOARD EVENT LISTENER//
@@ -51,7 +52,7 @@ var chatty = function(object) {
 		var chatBlock = document.getElementsByClassName("chatBlock");
 		for (var i = 0; i < chatBlock.length; i++) {
 			chatBlock[i].innerHTML = '';
-		};
+		}
 		chatty.setArray([]);
 	};
 
@@ -93,7 +94,7 @@ var chatty = function(object) {
 		var editButton = document.getElementsByClassName("editButton");
 		for (var i = 0; i < editButton.length; i++) {
 			editButton[i].addEventListener("click", editButtonCallback);
-		};
+		}
 	};
 
 	//METHOD ADDS EVENT LISTENERS FOR DELETE BUTTONS//
@@ -101,7 +102,7 @@ var chatty = function(object) {
 		var deleteButton = document.getElementsByClassName("deleteButton");
 		for (var i = 0; i < deleteButton.length; i++) {
 			deleteButton[i].addEventListener("click", deleteButtonCallback);
-		};
+		}
 	};
 	
 	//RETURNS AN OBJECT WITH A METHOD ATTACHED//	
